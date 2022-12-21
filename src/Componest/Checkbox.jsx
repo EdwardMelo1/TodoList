@@ -1,14 +1,14 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from "react";/*En esta linea se importa el react y el componente agarre todos los paquetes.
+*/
 
 
 const Checkbox = (props) => {
     const {
         onChange,
-        data: { id, description, done },
+        data: { id, description, done },//es un objeto y trae el evento onChange
     } = props;
     return (
-        <Fragment>
-            {/* Just ADD !!!! */}
+        <Fragment>{/* muchos cosas se meten dentro de este componente fragment para poder agrupar lo elementos sin introducir elementos extra a nivel de DOM*/}
             <svg
                 viewBox="0 0 0 0"
                 style={{ position: "absolute", zIndex: -1, opacity: 0 }}
@@ -22,9 +22,9 @@ const Checkbox = (props) => {
                     <path id="todo__check" d="M10 13l2 2 5-5" />
                     <circle id="todo__circle" cx="13.5" cy="12.5" r="10" />
                 </defs>
-            </svg>
+            </svg>{/* dentro del svg se un tipo de animacion anterios llamanda en el html para que funcione */}
 
-            <label className="todo new-item">
+            <label className="todo new-item">{/* dentro del label se encuentra primero el imput para escribir y despues el boton que esta dentro de un svg */}
                 <input
                     className="todo__state"
                     name={id}
